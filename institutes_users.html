@@ -878,5 +878,16 @@ table
     .draw();
 </script>
 
+<Script>
+    new DataTable('#example', {
+    initComplete: function () {
+        let api = this.api();
+ 
+        api.on('click', 'tbody td', function () {
+            api.search(this.innerHTML).draw();
+        });
+    }
+});
+</Script>
 </body>
 </html>
