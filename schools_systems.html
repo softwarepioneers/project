@@ -1854,16 +1854,20 @@
 
                     new DataTable('table.display1');
 
-                    new DataTable('#example1', {
-                        initComplete: function () {
-                        let api = this.api();
-        
-                    api.on('click', 'tbody td', function () {
-                    api.search(this.innerHTML).draw();
-                });
-    }
-});
 </script>
+
+        <SCript>
+            
+                    new DataTable('#example1', {
+                                        initComplete: function () {
+                                        let api = this.api();
+                        
+                                    api.on('click', 'tbody td', function () {
+                                    api.search(this.innerHTML).draw();
+                                });
+                    }
+                });
+        </SCript>
 
 <script>
     const table2 = new DataTable('#example2', {
@@ -1891,17 +1895,21 @@
 
         new DataTable('table.display2');
 
-        new DataTable('#example2', {
-                initComplete: function () {
-                  let api = this.api();
- 
-               api.on('click', 'tbody td', function () {
-               api.search(this.innerHTML).draw();
-            });
-
-        }
-});
+       
 </script>
+
+<SCript>
+            
+    new DataTable('#example2', {
+                        initComplete: function () {
+                        let api = this.api();
+        
+                    api.on('click', 'tbody td', function () {
+                    api.search(this.innerHTML).draw();
+                });
+    }
+});
+</SCript>
 
 <script>
 
@@ -1930,20 +1938,22 @@
 
                 new DataTable('table.display3');
 
-                new DataTable('#example3', {
-                        initComplete: function () {
-                        let api = this.api();
-        
-                    api.on('click', 'tbody td', function () {
-                    api.search(this.innerHTML).draw();
-
-                   
-            });
-
-        }
-});
+                
 
 </script>
+
+        <SCript>
+                    
+            new DataTable('#example3', {
+                                initComplete: function () {
+                                let api = this.api();
+                
+                            api.on('click', 'tbody td', function () {
+                            api.search(this.innerHTML).draw();
+                        });
+            }
+        });
+        </SCript>
 
 </body>
 </html>
