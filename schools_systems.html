@@ -202,7 +202,7 @@
             </div>
             <div class="container">
                 <div style="overflow-x:auto;">
-                    <table id="example" class="display" style="width:100%">
+                    <table id="example1" class="display" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -687,7 +687,7 @@
 
             <div class="container">
                 <div style="overflow-x:auto;">
-                    <table id="example" class="display" style="width:100%">
+                    <table id="example2" class="display" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -1344,7 +1344,7 @@
 
 
 <script>
-            const table = new DataTable('#example', {
+            const table1 = new DataTable('#example1', {
             columnDefs: [
                 {
                     searchable: false,
@@ -1355,11 +1355,11 @@
             order: [[1, 'asc']]
              });
         
-             table
+             table1
             .on('order.dt search.dt', function () {
                 let i = 1;
         
-                table
+                table1
                     .cells(null, 0, { search: 'applied', order: 'applied' })
                     .every(function (cell) {
                         this.data(i++);
@@ -1368,6 +1368,33 @@
             .draw();
 
             new DataTable('table.display');
+</script>
+
+<script>
+    const table2 = new DataTable('#example2', {
+    columnDefs: [
+        {
+            searchable: false,
+            orderable: false,
+            targets: 0
+        }
+    ],
+    order: [[1, 'asc']]
+     });
+
+     table2
+    .on('order.dt search.dt', function () {
+        let i = 1;
+
+        table2
+            .cells(null, 0, { search: 'applied', order: 'applied' })
+            .every(function (cell) {
+                this.data(i++);
+            });
+    })
+    .draw();
+
+    new DataTable('table.display');
 </script>
 
 </body>
