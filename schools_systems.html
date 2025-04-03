@@ -1856,18 +1856,7 @@
 
 </script>
 
-        <SCript>
-            
-                    new DataTable('#example1', {
-                                        initComplete: function () {
-                                        let api = this.api();
-                        
-                                    api.on('click', 'tbody td', function () {
-                                    api.search(this.innerHTML).draw();
-                                });
-                    }
-                });
-        </SCript>
+       
 
 <script>
     const table2 = new DataTable('#example2', {
@@ -1897,19 +1886,6 @@
 
        
 </script>
-
-<SCript>
-            
-    new DataTable('#example2', {
-                        initComplete: function () {
-                        let api = this.api();
-        
-                    api.on('click', 'tbody td', function () {
-                    api.search(this.innerHTML).draw();
-                });
-    }
-});
-</SCript>
 
 <script>
 
@@ -1941,19 +1917,6 @@
                 
 
 </script>
-
-        <SCript>
-                    
-            new DataTable('#example3', {
-                                initComplete: function () {
-                                let api = this.api();
-                
-                            api.on('click', 'tbody td', function () {
-                            api.search(this.innerHTML).draw();
-                        });
-            }
-        });
-        </SCript>
 
 </body>
 </html>
