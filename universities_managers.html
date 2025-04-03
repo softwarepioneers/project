@@ -26,9 +26,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bulma.css">
+  
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css">
 </head>
 
@@ -851,33 +849,12 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
-<script src="https://cdn.datatables.net/2.2.2/js/dataTables.bulma.js"></script>
+
 
 <script src=""></script>
 <script src=""></script>
 <script>
-        const table = new DataTable('#example', {
-    columnDefs: [
-        {
-            searchable: false,
-            orderable: false,
-            targets: 0
-        }
-    ],
-    order: [[1, 'asc']]
-});
- 
-table
-    .on('order.dt search.dt', function () {
-        let i = 1;
- 
-        table
-            .cells(null, 0, { search: 'applied', order: 'applied' })
-            .every(function (cell) {
-                this.data(i++);
-            });
-    })
-    .draw();
+       new DataTable('#example');
 </script>
 
 </body>
