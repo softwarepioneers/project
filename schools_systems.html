@@ -1830,37 +1830,37 @@
 
 <script>
             const table1 = new DataTable('#example1', {
-            columnDefs: [
-                {
-                    searchable: false,
-                    orderable: false,
-                    targets: 0
-                }
-            ],
-            order: [[1, 'asc']]
-             });
-        
-             table1
-            .on('order.dt search.dt', function () {
-                let i = 1;
-        
-                table1
-                    .cells(null, 0, { search: 'applied', order: 'applied' })
-                    .every(function (cell) {
-                        this.data(i++);
+                    columnDefs: [
+                        {
+                            searchable: false,
+                            orderable: false,
+                            targets: 0
+                        }
+                    ],
+                    order: [[1, 'asc']]
                     });
-            })
-            .draw();
+                
+                    table1
+                    .on('order.dt search.dt', function () {
+                        let i = 1;
+                
+                        table1
+                            .cells(null, 0, { search: 'applied', order: 'applied' })
+                            .every(function (cell) {
+                                this.data(i++);
+                            });
+                    })
+                    .draw();
 
-            new DataTable('table.display1');
+                    new DataTable('table.display1');
 
-            new DataTable('#example1', {
-                initComplete: function () {
-                  let api = this.api();
- 
-               api.on('click', 'tbody td', function () {
-               api.search(this.innerHTML).draw();
-            });
+                    new DataTable('#example1', {
+                        initComplete: function () {
+                        let api = this.api();
+        
+                    api.on('click', 'tbody td', function () {
+                    api.search(this.innerHTML).draw();
+                });
     }
 });
 </script>
@@ -1898,6 +1898,9 @@
                api.on('click', 'tbody td', function () {
                api.search(this.innerHTML).draw();
             });
+
+        }
+});
 </script>
 
 <script>
@@ -1933,7 +1936,12 @@
         
                     api.on('click', 'tbody td', function () {
                     api.search(this.innerHTML).draw();
-                    });
+
+                   
+            });
+
+        }
+});
 
 </script>
 
