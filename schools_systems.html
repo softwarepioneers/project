@@ -1853,6 +1853,16 @@
             .draw();
 
             new DataTable('table.display1');
+
+            new DataTable('#example1', {
+                initComplete: function () {
+                  let api = this.api();
+ 
+               api.on('click', 'tbody td', function () {
+               api.search(this.innerHTML).draw();
+            });
+    }
+});
 </script>
 
 <script>
@@ -1879,34 +1889,52 @@
     })
     .draw();
 
-    new DataTable('table.display2');
+        new DataTable('table.display2');
+
+        new DataTable('#example2', {
+                initComplete: function () {
+                  let api = this.api();
+ 
+               api.on('click', 'tbody td', function () {
+               api.search(this.innerHTML).draw();
+            });
 </script>
 
 <script>
-    const table3 = new DataTable('#example3', {
-    columnDefs: [
-        {
-            searchable: false,
-            orderable: false,
-            targets: 0
-        }
-    ],
-    order: [[1, 'asc']]
-     });
 
-     table3
-    .on('order.dt search.dt', function () {
-        let i = 1;
-
-        table3
-            .cells(null, 0, { search: 'applied', order: 'applied' })
-            .every(function (cell) {
-                this.data(i++);
+            const table2 = new DataTable('#example3', {
+            columnDefs: [
+                {
+                    searchable: false,
+                    orderable: false,
+                    targets: 0
+                }
+            ],
+            order: [[1, 'asc']]
             });
-    })
-    .draw();
 
-    new DataTable('table.display3');
+            table3
+            .on('order.dt search.dt', function () {
+                let i = 1;
+
+                table3
+                    .cells(null, 0, { search: 'applied', order: 'applied' })
+                    .every(function (cell) {
+                        this.data(i++);
+                    });
+            })
+            .draw();
+
+                new DataTable('table.display2');
+
+                new DataTable('#example3', {
+                        initComplete: function () {
+                        let api = this.api();
+        
+                    api.on('click', 'tbody td', function () {
+                    api.search(this.innerHTML).draw();
+                    });
+
 </script>
 
 </body>
